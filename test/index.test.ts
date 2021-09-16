@@ -6,10 +6,10 @@ describe('Filter Args Test Suite', () => {
     expect(typeof args).toBe('object');
   });
   it('should return the extra args with - or --', () => {
-    // running `yarn test --foo -bar`
-    expect(args.foo).toBeDefined();
-    expect(args.bar).toBeDefined();
-    expect('foo' in args).toBeTruthy();
-    expect('bar' in args).toBeTruthy();
+    // running `yarn test --ci --coverage --maxWorkers=2`
+    expect(args.ci).toBeDefined();
+    expect(args.coverage).toBeDefined();
+    expect('maxWorkers' in args).toBeTruthy();
+    expect('coverage' in args).toBeTruthy();
   });
 });
